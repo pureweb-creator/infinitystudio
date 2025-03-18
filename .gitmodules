@@ -1,0 +1,12 @@
+[submodule "wp-content/plugins/wordpress-seo-premium"]
+	path = wp-content/plugins/wordpress-seo-premium
+	url = git@github.com:wordpress-premium/wordpress-seo-premium.git
+[submodule "wp-content/plugins/wp-rocket"]
+	path = wp-content/plugins/wp-rocket
+	url = git@github.com:wordpress-premium/wp-rocket.git
+[submodule "wp-content/plugins/advanced-custom-fields-pro"]
+	path = wp-content/plugins/advanced-custom-fields-pro
+	url = git@github.com:wordpress-premium/advanced-custom-fields-pro.git
+[submodule "wp-content/plugins/polylang-pro"]
+	path = wp-content/plugins/polylang-pro
+	url = git@github.com:wordpress-premium/polylang-pro.git

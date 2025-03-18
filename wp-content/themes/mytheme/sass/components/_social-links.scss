@@ -1,0 +1,70 @@
+@use '../abstract/variables' as *;
+
+.social-links{
+  position: fixed;
+  z-index: 1000;
+  right: 160px;
+  bottom: 112px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all .2s ease;
+
+  &-item {
+    transition: all .2s ease;
+    &:hover {
+      background: $accent-color;
+
+      &:not(&.telegram){
+        path {
+          fill: $white-text;
+        }
+      }
+
+      &.telegram{
+        path {
+          stroke: $white-text;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background: #1c1c1d;
+    overflow: unset;
+  }
+
+  &-button{
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    background: rgba(217, 217, 217, 0.1);
+    backdrop-filter: blur(25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  &-close {
+    display: none
+  }
+
+  @media (max-width: $media-ht) {
+    right: 40px;
+    bottom: 50px
+  }
+
+  @media (max-width: $media-mobile) {
+    display: none;
+  }
+}

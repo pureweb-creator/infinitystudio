@@ -1,0 +1,60 @@
+services:
+  nginx:
+    image: 'nginx:latest'
+    ports:
+      - '80:80'
+    restart: always
+    depends_on:
+      - 'php-fpm'
+    volumes:
+      - './:/app'
+      - '.docker/nginx:/etc/nginx/conf.d'
+      - '.docker/log/nginx:/var/log/nginx'
+  php-fpm:
+    image: 'my-php-fpm:v1.0'
+    user: '1000'
+    build:
+      context: '.docker/php'
+      dockerfile: 'Dockerfile'
+    depends_on:
+      - 'mysql'
+      - 'memcached'
+    volumes:
+      - './:/app'
+      - '.docker/php/conf.d/custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini'
+  memcached:
+    image: 'memcached:latest'
+    ports:
+      - '11211:11211'
+  mysql:
+    image: 'mysql:latest'
+    restart: 'always'
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_USER: '${MYSQL_USER}'
+      MYSQL_DATABASE: '${MYSQL_DATABASE}'
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
+    volumes:
+      - '.docker/mysql/my.cnf:/etc/mysql/my.cnf'
+      - 'mysql:/var/lib/mysql'
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '--user=root', '-p=${MYSQL_ROOT_PASSWORD}']
+      retries: 3
+      timeout: 5s
+  horizon:
+    image: 'my-php-fpm:v1.0'
+    user: '1000'
+    tty: true
+    entrypoint: ''
+    restart: always
+    depends_on:
+      - 'mysql'
+      - 'memcached'
+    volumes:
+      - './:/app'
+
+volumes:
+  mysql:
+    driver: local

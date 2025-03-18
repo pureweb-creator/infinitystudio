@@ -1,0 +1,12 @@
+@use '../abstract/variables' as *;
+
+.audio{
+  position: fixed;
+  left: 160px;
+  bottom: 112px;
+  z-index: 11;
+
+  @media (max-width: $media-ht) {
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+# Ignore everything except "wp-content"
+/*
+!wp-content/
+
+# Ignore Editor files
+.idea
+
+# Ignore log files
+*.log
+
+# Ignore .env
+.env
+
+# Ignore node dependency directories
+node_modules/
+
+# Ignore Windows Zone.Identifier Alternate Data Stream(ADS) files
+*:Zone.Identifier
+
+# Track these files and directories, if they exist
+!.gitignore
+!.gitmodules
+!.editorconfig
+!.phpcs.xml.dist
+!README.md
+!CHANGELOG.md
+!composer.json
+!docker-compose.yml
+!.docker
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+# wp-content/plugins/*
+# !wp-content/plugins/my-directory-plugin/
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+!wp-content/themes/mytheme/

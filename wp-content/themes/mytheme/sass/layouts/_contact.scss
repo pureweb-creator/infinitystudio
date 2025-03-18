@@ -1,0 +1,84 @@
+@use '../abstract/variables' as *;
+
+#contact {
+  position: relative;
+  .bg {
+    width: 100%;
+    height: 90%;
+    background: #010511;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+  }
+  .laptop{
+    width: 1080px;
+    height: 675px;
+    margin: 0 auto;
+    background: url("$images/MacBook-Pro-16.png") no-repeat center center / contain;
+    padding-top: 20px;
+    position: relative;
+    z-index: 2;
+    &-screen {
+      margin: 0 auto;
+      width: 880px;
+      height: 550px;
+      background: url("$images/Change-This.png") no-repeat center center / contain;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .table {
+    width: 1187px;
+    height: 288px;
+    margin: -100px auto 0;
+    position: relative;
+    background: url("$images/TABLE.png") no-repeat center center / contain;
+  }
+
+  @media (max-width: $media-ht) {
+    .laptop {
+      width: 870px;
+      height: 550px;
+    }
+
+    .laptop-screen {
+      width: 710px;
+      height: 444px;
+    }
+
+    .table {
+      margin-top: -88px;
+      height: 228px;
+      width: 968px;
+    }
+  }
+
+  @media (max-width: $media-vt) {
+    .laptop {
+      width: 747px;
+      height: 468px;
+    }
+
+    .laptop-screen {
+      width: 610px;
+      height: 380px;
+    }
+
+    .table {
+      margin-top: -79px;
+      height: 187px;
+      width: 776px;
+    }
+  }
+
+  @media (max-width: 776px) {
+    display: none
+  }
+
+}

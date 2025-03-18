@@ -1,0 +1,67 @@
+@use '../abstract/variables' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $dark-blue;
+  overflow-x: hidden;
+}
+
+h2 {
+  margin-bottom: 30px;
+
+  @media (max-width: $media-ht) {
+    margin-bottom: 25px;
+  }
+}
+
+a {
+  transition: all .3s ease;
+}
+
+input {
+  outline: none;
+  border: none;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #000;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.wpcf7-not-valid::placeholder{
+  color: #ff0000;
+  opacity: 1;
+}

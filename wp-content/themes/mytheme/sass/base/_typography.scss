@@ -1,0 +1,66 @@
+@use '../abstract/variables' as *;
+
+@font-face {
+  font-family: 'Mazzard H';
+  src: url('$fonts/MazzardH-SemiBold.eot');
+  src: url('$fonts/MazzardH-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('$fonts/MazzardH-SemiBold.woff2') format('woff2'),
+  url('$fonts/MazzardH-SemiBold.woff') format('woff'),
+  url('$fonts/MazzardH-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard H';
+  src: url('$fonts/MazzardH-Bold.eot');
+  src: url('$fonts/MazzardH-Bold.eot?#iefix') format('embedded-opentype'),
+  url('$fonts/MazzardH-Bold.woff2') format('woff2'),
+  url('$fonts/MazzardH-Bold.woff') format('woff'),
+  url('$fonts/MazzardH-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+  font-family: 'Mazzard H', sans-serif;
+  color: $white-text;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: .1em;
+  line-height: 1.5;
+
+  @media (max-width: $media-ht) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $media-mobile) {
+    font-size: 12px;
+  }
+}
+
+.text-accent {
+  color: $accent-color
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+  @media (max-width: $media-mobile) {
+    font-size: 25px;
+  }
+}
+
+h2 {
+  letter-spacing: .15em;
+  font-size: 30px;
+  text-transform: uppercase;
+
+  @media (max-width: $media-ht) {
+    font-size: 25px;
+  }
+}

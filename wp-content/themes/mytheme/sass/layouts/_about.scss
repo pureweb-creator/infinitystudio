@@ -1,0 +1,30 @@
+@use '../abstract/variables' as *;
+#about {
+  padding: 126px 0 125px;
+  text-align: center;
+
+  p {
+    max-width: 992px;
+    margin: 0 auto 30px;
+  }
+
+  .contact-us{
+    margin-top: 20px;
+  }
+
+  @media (max-width: $media-vt) {
+    padding: 100px 80px 100px
+  }
+
+  @media (max-width: $media-mobile) {
+    padding: 50px 20px 194px;
+
+    p {
+      margin-bottom: 25px;
+    }
+
+    .contact-us {
+      margin-top: 5px;
+    }
+  }
+}

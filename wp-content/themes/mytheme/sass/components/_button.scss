@@ -1,0 +1,41 @@
+@use '../abstract/variables' as *;
+
+.button {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0 82px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  text-transform: uppercase;
+  color: $white-text;
+  overflow: hidden;
+
+  &-arrow {
+    position: absolute;
+    right: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all .3s;
+  }
+  &--primary{
+    background: $accent-color;
+  }
+  &--secondary{
+    background: $dark-blue;
+    color: $dark-gray-tertiary;
+
+    .button-arrow path{
+      stroke: $dark-gray-tertiary
+    }
+  }
+  &:hover &-arrow {
+    opacity: 1;
+    right: 22px;
+  }
+}

@@ -1,0 +1,153 @@
+@use '../abstract/variables' as *;
+
+#hero{
+  min-height: 100vh;
+  height: auto;
+  background: url('$images/BACKGROUND.jpg') center center no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  -webkit-border-radius: 0 0 50px 50px;
+  -moz-border-radius: 0 0 50px 50px;
+  border-radius: 0 0 50px 50px;
+
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left, .right {
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .left {
+    text-align: left;
+
+    .about-us {
+      display: none;
+    }
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .tagline {
+    margin-bottom: 25px;
+    line-height: 1.175em;
+  }
+
+  .description {
+    color: #CACACA;
+    font-size: 14px;
+  }
+
+  .actions{
+    margin-top: 30px;
+  }
+
+  .astronaut{
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    transform: translateX(-50%);
+    height: 88vh;
+    max-height: 88vh;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: $media-ht){
+    .container {
+      padding-left: 130px
+    }
+    .left {
+      max-width: 500px;
+    }
+
+    .right {
+      display: none;
+    }
+
+    .astronaut {
+      width: 600px;
+      height: auto;
+      right: 40px;
+      left: unset;
+      transform: unset;
+    }
+  }
+
+  @media screen and (max-width: $media-vt) {
+    align-items: flex-start;
+
+    .container {
+      justify-content: center;
+      padding: 0 10px
+    }
+
+    .left {
+      text-align: center;
+      padding-left: 0;
+      margin-top: 125px;
+      position: relative;
+      z-index: 9;
+      max-width: 540px;
+
+      .about-us {
+        display: inline-block;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .astronaut {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  @media (max-width: $media-mobile) {
+    .container {
+      padding: 0 5px
+    }
+
+    .left {
+      position: static;
+      margin-top: 100px;
+      .contact-us {
+        bottom: 17px;
+        position: absolute;
+      }
+      .about-us {
+        display: none;
+      }
+    }
+
+    .description {
+      font-size: 12px;
+    }
+
+    .tagline {
+      margin-bottom: 15px;
+    }
+
+    .astronaut {
+      max-width: unset;
+      width: 470px;
+      bottom: -127px;
+    }
+  }
+}
