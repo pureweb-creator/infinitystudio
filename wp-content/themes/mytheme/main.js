@@ -13,7 +13,7 @@ $('.social-links').on('mouseover', function() {
 })
 
 $('.nav-bar-content').on('click', function() {
-    $('.nav-screen').fadeToggle(200)
+    $('.nav-screen').slideToggle(400)
     $('.hamburger').toggleClass('active')
 })
 
@@ -24,7 +24,8 @@ $('.modal-close').on('click', function() {
 
 $(".modal").on("click", function(event) {
     if (event.target === this) {
-        $(this).fadeOut();
+        $(this).fadeOut(200);
+        $('body').css('overflow', 'auto')
     }
 });
 

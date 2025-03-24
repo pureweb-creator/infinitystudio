@@ -1,7 +1,7 @@
 @use '../abstract/variables' as *;
 
 #hero{
-  min-height: 100vh;
+  min-height: 100dvh;
   height: auto;
   background: url('$images/BACKGROUND.jpg') center center no-repeat;
   background-size: cover;
@@ -103,7 +103,7 @@
       max-width: 540px;
 
       .about-us {
-        display: inline-block;
+        display: flex;
       }
     }
 

@@ -27,6 +27,7 @@ input {
   letter-spacing: inherit;
   font-weight: inherit;
   font-size: inherit;
+  padding: 0;
 }
 
 input[type="checkbox"] {
@@ -64,4 +65,8 @@ textarea:-moz-placeholder {
 .wpcf7-not-valid::placeholder{
   color: #ff0000;
   opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+  line-height:normal!important;
 }

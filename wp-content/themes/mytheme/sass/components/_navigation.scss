@@ -1,8 +1,8 @@
 @use '../abstract/variables' as *;
 
 .nav-bar{
-  position: absolute;
-  z-index: 9;
+  position: fixed;
+  z-index: 12;
   left: 0;
   top: 0;
   width: 100%;
@@ -130,10 +130,11 @@
 }
 
 .nav-screen {
-  width: 100%;
+  width: calc(100% + 2px);
+  left: -1px;
   padding-bottom: 26px;
   background: url("$images/MENUBG.svg") no-repeat center top / cover;
-  position: absolute;
+  position: fixed;
   //border-bottom: 1px solid #2A2A2A;
   backdrop-filter: blur(25px);
   z-index: 10;
