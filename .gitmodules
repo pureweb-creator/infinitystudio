@@ -10,3 +10,9 @@
 [submodule "wp-content/plugins/polylang-pro"]
 	path = wp-content/plugins/polylang-pro
 	url = git@github.com:wordpress-premium/polylang-pro.git
+[submodule "wp-content/plugins/wp-sync-db"]
+	path = wp-content/plugins/wp-sync-db
+	url = git@github.com:wp-sync-db/wp-sync-db.git
+[submodule "wp-content/plugins/wp-sync-db-media-files"]
+	path = wp-content/plugins/wp-sync-db-media-files
+	url = git@github.com:wp-sync-db/wp-sync-db-media-files.git
