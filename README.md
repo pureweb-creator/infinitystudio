@@ -1,13 +1,17 @@
-# Docker Development Template
+Installation
+---------------
 
-This Docker template provides a base setup for developing web applications using Nginx, PHP-FPM, Memcached, and MySQL.
+### Requirements
 
-## Configuration
+Theme requires the following dependencies:
 
-- **Nginx**: Configuration files can be found in the `.docker/nginx/` directory.
-- **PHP-FPM**: Configuration files are located in the `.docker/php/` directory.
-- **MySQL**: Database configuration files can be found in the `.docker/mysql/` directory.
+- [Node.js](https://nodejs.org/)
+- [Composer](https://getcomposer.org/)
 
-## Volumes
+### Setup
 
-- **MySQL**: Data files are mounted inside docker container.
+You need to install Node.js and Composer dependencies:
+
+```sh
+$ composer install
+$ npm install
