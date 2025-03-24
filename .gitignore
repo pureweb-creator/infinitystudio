@@ -14,6 +14,9 @@
 # Ignore node dependency directories
 node_modules/
 
+# Ignore build
+dist/
+
 # Ignore Windows Zone.Identifier Alternate Data Stream(ADS) files
 *:Zone.Identifier
 
@@ -37,8 +40,11 @@ wp-content/*
 
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
-# wp-content/plugins/*
-# !wp-content/plugins/my-directory-plugin/
+wp-content/plugins/*
+!wp-content/plugins/advanced-custom-fields-pro/
+!wp-content/plugins/polylang-pro/
+!wp-content/plugins/wordpress-seo-premium/
+!wp-content/plugins/wp-rocket/
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
